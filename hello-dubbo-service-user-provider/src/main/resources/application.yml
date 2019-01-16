@@ -1,0 +1,46 @@
+# Spring boot application
+spring:
+  application:
+    name: hello-dubbo-service-user-provider
+
+user:
+  service:
+    version: 1.0.0
+
+dubbo:
+  scan:
+    basePackages: com.czy.hello.dubbo.service.user.provider.api
+  application:
+    id: hello-dubbo-service-user-provider
+    name: hello-dubbo-service-user-provider
+    qos-port: 22222
+    qos-enable: true
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 12345
+    status: server
+  registry:
+    id: zookeeper
+    address: zookeeper://47.92.238.208:2181?backup=47.92.238.208:2182,47.92.238.208:2183
+  provider:
+    loadbalance: roundrobin
+management:
+  endpoint:
+    dubbo:
+      enabled: true
+    dubbo-shutdown:
+      enabled: true
+    dubbo-configs:
+      enabled: true
+    dubbo-services:
+      enabled: true
+    dubbo-references:
+      enabled: true
+    dubbo-properties:
+      enabled: true
+  health:
+    dubbo:
+      status:
+        defaults: memory
+        extras: load,threadpool
