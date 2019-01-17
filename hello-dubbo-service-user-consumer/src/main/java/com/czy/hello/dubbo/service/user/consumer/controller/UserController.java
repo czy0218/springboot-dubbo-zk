@@ -19,7 +19,7 @@ public class UserController {
         return userService.sayHi();
     }
 
-    @RequestMapping(value = "/hystrix")
+    @RequestMapping(value = "/hiHystrix")
     @HystrixCommand(fallbackMethod = "hiError")
     public String hystrix() {
         return userService.hiHystrix();
