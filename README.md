@@ -1,5 +1,5 @@
-# spring-cloud-alibaba
-spring-cloud-alibaba
+# springboot-dubbo-zookeeper
+springboot-dubbo-zookeeper
 
 
-注册中心为阿里巴巴独立封装项目 nacos
+zookeeper 阿里云中
