@@ -25,6 +25,8 @@ dubbo:
     address: zookeeper://47.92.238.208:2181?backup=47.92.238.208:2182,47.92.238.208:2183
   consumer:
     loadbalance: roundrobin
+  protocol:
+    serialization: kryo
 endpoints:
   dubbo:
     enabled: true
